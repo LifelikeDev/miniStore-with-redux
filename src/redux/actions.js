@@ -1,8 +1,8 @@
 import * as actionTypes from "./actiontypes";
 
 // creating action functions
-const getProductsFunction = () => {
-  return { type: actionTypes.GET_PRODUCTS };
+const getProducts = (products) => {
+  return { type: actionTypes.GET_PRODUCTS, payload: products };
 };
 
-export { getProductsFunction };
+export { getProducts };

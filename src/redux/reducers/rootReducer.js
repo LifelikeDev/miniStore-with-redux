@@ -3,7 +3,6 @@ import * as actionTypes from "../actiontypes";
 // initializing default state
 const initialState = {
   products: [],
-  note: "some regular products",
 };
 
 // construct rootReducer
@@ -12,8 +11,7 @@ const rootReducer = (state = initialState, action) => {
     case actionTypes.GET_PRODUCTS:
       return {
         ...state,
-        products: [1, 2],
-        note: "products added",
+        products: action.payload,
       };
 
     default:
