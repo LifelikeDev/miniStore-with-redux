@@ -1,0 +1,10 @@
+.products-collection {
+  width: 100%;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 80%;
+  margin: 1rem auto;
+}

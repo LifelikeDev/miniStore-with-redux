@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: rgb(225, 228, 233);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  height: 100vh;
+  padding: 2rem 1rem;
+  /* outline: 2px solid red; */
+  text-align: center;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-box .btn {
+  margin: 0.5rem;
+}
+
+.btn {
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 2px;
+  color: #eee;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+}
+
+.btn:hover {
+  opacity: 0.75;
+}
+
+.counter-box h2 {
+  color: rgb(139, 13, 13);
+  font-size: 62px;
+}
+
+/* Modal Component */
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-overlay.revealed {
+  background-color: rgba(0, 0, 0, 0.445);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+.modal-container {
+  background-color: rgb(225, 228, 233);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 40vh;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  width: clamp(200px, 400px, 85%);
+}
