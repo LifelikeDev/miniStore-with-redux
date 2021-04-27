@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // component imports
 import Header from "./Components/Header";
 import Home from "./Components/Home";
+import ProductInfo from "./Components/ProductInfo";
 import AboutUs from "./Components/AboutUs";
 
 const App = () => {
@@ -15,6 +16,9 @@ const App = () => {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/product/:productId">
+              <ProductInfo />
             </Route>
             <Route exact path="/about">
               <AboutUs />

@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../redux/actions";
 
 const ProductsPage = () => {
-  const products = useSelector((state) => state.rootReducer.products);
+  const products = useSelector((state) => state.entireProducts.products);
   const dispatch = useDispatch();
 
   const fetchProducts = async () => {
@@ -14,7 +14,7 @@ const ProductsPage = () => {
     const response = await axios
       .get("https://fakestoreapi.com/products")
       .catch((error) => console.log("Error", error));
-    // dispatch action to push response.data into products array
+    // dispatch action to push data fetched into the products array
     dispatch(getProducts(response.data));
   };
 

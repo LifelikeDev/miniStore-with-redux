@@ -6,17 +6,30 @@ const initialState = {
 };
 
 // construct rootReducer
-const rootReducer = (state = initialState, action) => {
+const getProductsReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.GET_PRODUCTS:
       return {
         ...state,
         products: action.payload,
       };
-
     default:
       return state;
   }
 };
 
-export default rootReducer;
+const selectedProductReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case actionTypes.SELECT_PRODUCT:
+      return {
+        ...state,
+        ...payload,
+      };
+    case actionTypes.REMOVE_SELECTED_PRODUCT:
+      return {};
+    default:
+      return state;
+  }
+};
+
+export { getProductsReducer, selectedProductReducer };

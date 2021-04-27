@@ -1,15 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./product.css";
 // import image from "./image.jpg";
 
-const Product = ({ title, price, category, image }) => {
+const Product = ({ id, title, price, category, image }) => {
   return (
     <article className="each-product">
       <img src={image} alt="product" className="each-product__image" />
       <div className="view-cta">
-        <button className="cta" onClick={() => alert("PRODUCT CLICKED")}>
-          View
-        </button>
+        <Link to={`/product/${id}`}>
+          <button className="cta">View</button>
+        </Link>
       </div>
       <div className="product-description">
         <h6 className="product-name">
@@ -22,6 +22,7 @@ const Product = ({ title, price, category, image }) => {
       </div>
     </article>
   );
+  // );
 };
 
 export default Product;
