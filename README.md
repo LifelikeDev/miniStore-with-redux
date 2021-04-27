@@ -1,3 +1,9 @@
+# miniStore
+A mini-version of an e-commerce app built with Reactjs and Redux. Products data is fetched from [FakeStoreAPI](https://fakestoreapi.com/products)
+
+<hr>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
