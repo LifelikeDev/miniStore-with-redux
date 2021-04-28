@@ -28,3 +28,22 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@media screen and (max-width: 478px) {
+  header .brand-name {
+    font-size: 18px;
+  }
+
+  header nav ul {
+    justify-content: center;
+  }
+
+  li {
+    font-size: 14px;
+    /* padding: 0 0.5rem; */
+  }
+
+  li:last-of-type {
+    padding-right: 0;
+  }
+}

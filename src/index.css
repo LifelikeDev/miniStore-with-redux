@@ -95,3 +95,10 @@ body {
   padding: 0.8rem 1rem;
   width: clamp(200px, 400px, 85%);
 }
+
+@media screen and (max-width: 478px) {
+  h2,
+  h3 {
+    font-size: 17px;
+  }
+}
